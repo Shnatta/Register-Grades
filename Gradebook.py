@@ -1,4 +1,5 @@
 #Gradebook Project *Display a persons grades/where can he/she get a job!*
+#Thanks to Subzidion(Twitch), LoveFeelings(Twitch), MichaelC212(Twitch)
 import time
 from prettytable import PrettyTable
 
