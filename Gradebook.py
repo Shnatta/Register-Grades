@@ -1,5 +1,5 @@
 #Gradebook Project *Display a persons grades/where can he/she get a job!*
-#Thanks to Subzidion(Twitch), LoveFeelings(Twitch), MichaelC212(Twitch)#
+#Thanks to LoveFeelings(https://www.twitch.tv/lovefeelings), Subzidion(https://www.twitch.tv/subzidion), MichaelC212(https://www.twitch.tv/michaelc212)
 import time
 from prettytable import PrettyTable
 
@@ -69,13 +69,13 @@ def classes():
         classes()
 def Getgrades():
     global grades
-    grades = []
+    grades = {}
     for cl in s_classes:
         while True:
             try:
                 a = int(input("What did you get in {} ".format(cl)))
                 print("Registered for {}.".format(cl))
-                grades.append('{}: {}'.format(cl, a))
+                grades[cl] = a
                 break
             except ValueError:
                 print("Please give a valid integer")
@@ -93,7 +93,12 @@ Getgrades()
 
 Student_1 = Student(name_, age_, born_, s_classes, grades)
 test = (', \n'.join(grades) )
-x.field_names = ["Name", "Born", "Age", "Grades"]
-x.add_row([name_, born_ , age_, test])
-print(x)
+value = sum(grades.values())
+c = len(grades)
+x.field_names = ["Name", "Born", "Age", "Grades", "Snitt(NO)"]
+x.add_row([name_, born_ , age_, test, value / c])
+#file = open("details.txt", "w")
+#file.write(x)
+#file.close()
+print(x) #+ "\n(Data saved @ 'details.txt')")
 Wait(200)
