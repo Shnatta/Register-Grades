@@ -96,7 +96,7 @@ Student_1 = Student(name_, age_, born_, s_classes, grades)
 test = (', \n'.join(grades) )
 value = sum(grades.values())
 c = len(grades)
-x.field_names = ["Name", "Born", "Age", "Grades", "Snitt(NO)"]
+x.field_names = ["Name", "Born", "Age", "Classes", "Snitt(NO)"]
 x.add_row([name_, born_ , age_, test, value / c])
 #file = open("details.txt", "w")
 #file.write(x)
