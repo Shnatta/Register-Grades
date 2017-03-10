@@ -1,4 +1,5 @@
 #Gradebook Project *Display a persons grades/where can he/she get a job!*
+#Made by JonathanD
 #Thanks to LoveFeelings(https://www.twitch.tv/lovefeelings), Subzidion(https://www.twitch.tv/subzidion), MichaelC212(https://www.twitch.tv/michaelc212)
 import time
 from prettytable import PrettyTable
@@ -83,7 +84,7 @@ def Getgrades():
 #mylist = ['spam', 'ham', 'eggs']
 #print(mylist)
 #print (', '.join(mylist) )
-
+print("Made by JonathanD 2017\n")
 name()
 age()
 born()
